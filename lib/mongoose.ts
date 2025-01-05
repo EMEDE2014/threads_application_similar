@@ -9,8 +9,6 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect(process.env.MONGODB_URL);
-
-    console.log("Connected on mongoose");
   } catch (e) {
     console.log(e);
   }

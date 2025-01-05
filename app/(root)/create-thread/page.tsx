@@ -10,9 +10,13 @@ async function Page() {
 
   const userInfo = await fetchUser(user.id);
 
+  console.log("=============================================");
+  console.log(userInfo);
+
+  console.log("=============================================");
+
   if (!userInfo?.onboarded) redirect("/onboarding");
 
-  //   const userInfo = await
   return (
     <>
       <h1 className="head-text">Create Threads</h1>;

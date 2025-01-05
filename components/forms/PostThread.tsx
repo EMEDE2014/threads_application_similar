@@ -10,7 +10,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -61,9 +61,8 @@ function PostThread({ userId }: Params) {
   };
 
   return (
-    <form>
-      <Form
-        {...form}
+    <Form {...form}>
+      <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="mt-10 flex flex-col justify-start gap-10"
       >
@@ -86,11 +85,12 @@ function PostThread({ userId }: Params) {
             </FormItem>
           )}
         />
-      </Form>
-      <Button type="submit" className="bg-primary-500">
-        Post thread
-      </Button>
-    </form>
+
+        <Button type="submit" className="bg-primary-500">
+          Post thread
+        </Button>
+      </form>
+    </Form>
   );
 }
 
